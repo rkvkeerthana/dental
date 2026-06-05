@@ -1,0 +1,148 @@
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+
+  /* space for absolute navbar */
+  padding: 120px 5% 70px;
+}
+
+/* ================= CONTAINER ================= */
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ================= CONTENT ================= */
+
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+/* TITLE */
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.tooth-icon {
+  vertical-align: middle;
+  margin: 0 6px;
+  color: white;
+  font-size: 48px;
+}
+
+/* TEXT */
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.hero-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .hero-section {
+    padding: 140px 40px 80px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    padding: 130px 20px 60px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-container {
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .tooth-icon {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}

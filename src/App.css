@@ -1,0 +1,24 @@
+/* Remove default margins and fix overflow */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* fixes right-side gaps */
+  font-family: "Inter", sans-serif;
+}
+
+/* Optional: center root container if needed */
+#root {
+  width: 100%;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
