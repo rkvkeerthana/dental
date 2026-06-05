@@ -2,8 +2,8 @@ import "./Work.css";
 
 import img1 from "../../assets/services/service1.jpg";
 import img2 from "../../assets/services/service3.jpg";
-import user1 from "../../assets/WORK/profile1.jpg";
-import user2 from "../../assets/wORK/profile2.jpg";
+import user1 from "../../assets/Work/profile1.jpg";
+import user2 from "../../assets/Work/profile2.jpg";
 
 export default function ServicesTwo() {
   return (
