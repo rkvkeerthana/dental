@@ -1,7 +1,7 @@
 //import React from "react";
 import "./Services.css";
 import { FaTooth, FaTeeth, FaTeethOpen } from "react-icons/fa6";
-import videoImg from "../../assets/services/service4.jpeg";
+import videoImg from "../../assets/Services/service4.jpeg";
 
 export default function ServiceOne() {
   return (
