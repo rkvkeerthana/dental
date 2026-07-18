@@ -70,7 +70,7 @@ export default function EnquirySection() {
     <div className="form-group">
       <label>Message</label>
       <textarea
-        rows="5"
+        rows={5}
         placeholder="Write your enquiry..."
       ></textarea>
     </div>

@@ -33,7 +33,7 @@ export default function Navbar() {
 
 
 
-  const scrollToSection = (id, name) => {
+  const scrollToSection = (id: string, name: string) => {
 
     setActive(name);
 
