@@ -1,13 +1,22 @@
 import "./About.css";
 
-// ✅ IMPORT IMAGES FROM ASSETS
+// IMPORT IMAGES
 import leftImg from "../../assets/About/left.jpg";
 import centerImg from "../../assets/About/center.jpg";
 import rightImg from "../../assets/About/right.jpg";
 
 export default function About() {
+
+  const scrollToEnquiry = () => {
+    const section = document.getElementById("enquiry");
+    section?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-container">
 
         <p className="about-label">ABOUT US</p>
@@ -27,19 +36,22 @@ export default function About() {
             </h2>
 
             <p className="about-para">
-              We help brands grow with modern design and creative solutions. It includes general checkups, cleanings, and, often, cosmetic or surgical procedures. Key areas include restorative care (fillings, crowns, implants) and specialized treatments for oral health. 
+              We help brands grow with modern design and creative solutions.
+              It includes general checkups, cleanings, and cosmetic or surgical
+              procedures. Key areas include restorative care (fillings, crowns,
+              implants) and specialized treatments for oral health.
             </p>
 
-            {/* CENTER IMAGE */}
             <div className="about-image-box">
               <img src={centerImg} alt="center" />
 
-              <button className="about-btn">
-                Book Apointment
+              <button
+                className="about-btn"
+                onClick={scrollToEnquiry}
+              >
+                Book Appointment
               </button>
             </div>
-
-           
 
           </div>
 
@@ -47,7 +59,7 @@ export default function About() {
           <div className="about-right">
             <img src={rightImg} alt="about-right" />
             <p className="about-percent">98%</p>
-             <span className="about-small">
+            <span className="about-small">
               Trusted by clients worldwide
             </span>
           </div>

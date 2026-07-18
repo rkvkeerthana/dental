@@ -1,11 +1,19 @@
-//import React from "react";
 import "./Services.css";
 import { FaTooth, FaTeeth, FaTeethOpen } from "react-icons/fa";
 import videoImg from "../../assets/Services/service4.jpeg";
 
 export default function ServiceOne() {
+
+  const scrollToEnquiry = () => {
+    const section = document.getElementById("enquiry");
+    section?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <section className="serviceOne">
+    <section className="serviceOne" id="services">
       <div className="serviceOne-container">
 
         {/* ===== TOP HEADER ===== */}
@@ -20,7 +28,12 @@ export default function ServiceOne() {
               website are based drivers.
             </p>
 
-            <button className="serviceOne-btn">Book Appointment →</button>
+            <button
+              className="serviceOne-btn"
+              onClick={scrollToEnquiry}
+            >
+              Book Appointment →
+            </button>
           </div>
         </div>
 
@@ -36,7 +49,6 @@ export default function ServiceOne() {
               <span>Read More →</span>
             </div>
 
-            {/* DIVIDER */}
             <div className="serviceOne-divider">
               <span>OUR SERVICES</span>
             </div>

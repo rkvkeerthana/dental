@@ -6,8 +6,16 @@ import trustVideo from "../../assets/Trust/trust2.jpg";
 import trustSide from "../../assets/Trust/trust4.jpg";
 
 export default function TrustSection() {
+
+  const scrollToEnquiry = () => {
+    document.getElementById("enquiry")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <section className="trust">
+    <section className="trust" id="trust">
 
       <div className="trust-container">
 
@@ -40,7 +48,10 @@ export default function TrustSection() {
             early cancer detection, and genetic testing.
           </p>
 
-          <button className="trust-btn">
+          <button
+            className="trust-btn"
+            onClick={scrollToEnquiry}
+          >
             Book Appointment →
           </button>
         </div>

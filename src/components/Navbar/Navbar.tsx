@@ -3,50 +3,150 @@ import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuItems = ["Home", "About", "Product", "Services", "Appointment"];
+
+  const menuItems = [
+    {
+      name: "Home",
+      id: "home",
+    },
+    {
+      name: "About",
+      id: "about",
+    },
+    {
+      name: "Product",
+      id: "work",
+    },
+    {
+      name: "Services",
+      id: "services",
+    },
+    {
+      name: "Appointment",
+      id: "enquiry",
+    },
+  ];
+
+
+
+  const scrollToSection = (id, name) => {
+
+    setActive(name);
+
+    setMenuOpen(false);
+
+
+    const section = document.getElementById(id);
+
+    if (section) {
+
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+    }
+
+  };
+
+
 
   return (
+
     <header className="lp-navbar">
+
       <div className="lp-nav-container">
 
+
         {/* LOGO */}
-        <div className="logo">Dental</div>
+        <div
+          className="logo"
+          onClick={() => scrollToSection("home", "Home")}
+        >
+          Dental
+        </div>
+
+
 
         {/* MENU */}
-        <nav className={`lp-menu-container ${menuOpen ? "open" : ""}`}>
+
+        <nav
+          className={`lp-menu-container ${
+            menuOpen ? "open" : ""
+          }`}
+        >
+
           <ul className="lp-menu">
+
             {menuItems.map((item) => (
+
               <li
-                key={item}
-                className={active === item ? "active" : ""}
-                onClick={() => {
-                  setActive(item);
-                  setMenuOpen(false); // close after click
-                }}
+                key={item.name}
+
+                className={
+                  active === item.name
+                  ? "active"
+                  : ""
+                }
+
+                onClick={() =>
+                  scrollToSection(
+                    item.id,
+                    item.name
+                  )
+                }
+
               >
-                {item}
+
+                {item.name}
+
               </li>
+
             ))}
+
           </ul>
+
         </nav>
 
+
+
         {/* CALL BUTTON */}
+
         <div className="call-btn">
-          <a href="tel:+1234567890">Call Now</a>
+
+          <a href="tel:+919876543210">
+            Call Now
+          </a>
+
         </div>
 
-        {/* HAMBURGER */}
+
+
+        {/* MOBILE MENU BUTTON */}
+
         <div
           className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() =>
+            setMenuOpen(!menuOpen)
+          }
         >
-          {menuOpen ? <FaTimes /> : <FaBars />}
+
+          {
+            menuOpen
+            ? <FaTimes />
+            : <FaBars />
+          }
+
         </div>
 
+
       </div>
+
     </header>
+
   );
 }

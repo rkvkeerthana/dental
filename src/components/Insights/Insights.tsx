@@ -25,7 +25,7 @@ const insights = [
 
 export default function Insights() {
   return (
-    <section className="insights-section">
+    <section className="insights-section" id="insights">
       <div className="insights-container">
 
         {/* HEADER */}

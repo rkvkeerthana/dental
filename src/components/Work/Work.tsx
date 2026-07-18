@@ -6,8 +6,16 @@ import user1 from "../../assets/Work/profile1.jpg";
 import user2 from "../../assets/Work/profile2.jpg";
 
 export default function ServicesTwo() {
+
+  const scrollToEnquiry = () => {
+    document.getElementById("enquiry")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <section className="serviceTwo">
+    <section className="serviceTwo" id="work">
       <div className="serviceTwo-wrapper">
 
         {/* ===== LEFT SIDE ===== */}
@@ -21,7 +29,10 @@ export default function ServicesTwo() {
             for each.
           </p>
 
-          <button className="serviceTwo-btn">
+          <button
+            className="serviceTwo-btn"
+            onClick={scrollToEnquiry}
+          >
             Book Appointment →
           </button>
 

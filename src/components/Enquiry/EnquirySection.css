@@ -1,0 +1,269 @@
+/* ===== SECTION ===== */
+
+.enquiry-section {
+  padding: 90px 20px;
+  background: #fff8fb;
+}
+
+.enquiry-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+
+/* ================= LEFT CONTENT ================= */
+
+.enquiry-title {
+  font-size: 42px;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.enquiry-left p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.enquiry-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.enquiry-left li {
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #444;
+}
+
+
+/* ================= FORM CARD ================= */
+
+.enquiry-right {
+
+  background: #ffeaf2;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(255, 182, 193, .25);
+
+}
+
+
+.enquiry-right form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+
+/* ================= FORM ROW ================= */
+
+
+.form-row {
+
+  display: flex;
+  gap: 20px;
+
+}
+
+
+.form-group {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+/* ================= LABEL ================= */
+
+
+.form-group label {
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+
+}
+
+
+/* ================= INPUT ================= */
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid #f4c6d6;
+  border-radius: 12px;
+
+  background: #fff;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+  border-color: #111;
+
+}
+
+
+.form-group textarea {
+
+  resize: none;
+
+}
+
+
+
+/* ================= SUBMIT BUTTON ================= */
+
+
+.enquiry-right button {
+
+  background: #000;
+
+  color: #fff;
+
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  width: fit-content;
+
+  align-self: flex-start;
+
+}
+
+
+.enquiry-right button:hover {
+
+  background: #222;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ================= RESPONSIVE TABLET ================= */
+
+
+@media(max-width:900px){
+
+
+.enquiry-container{
+
+  grid-template-columns:1fr;
+
+}
+
+
+.enquiry-left{
+
+  text-align:center;
+
+}
+
+
+}
+
+
+/* ================= RESPONSIVE MOBILE ================= */
+
+
+@media(max-width:600px){
+
+
+.enquiry-section{
+
+  padding:60px 15px;
+
+}
+
+
+.enquiry-title{
+
+  font-size:30px;
+
+}
+
+
+.enquiry-left p{
+
+  font-size:15px;
+
+}
+
+
+.enquiry-right{
+
+  padding:25px;
+
+}
+
+
+/* 2 columns become single */
+
+.form-row{
+
+  flex-direction:column;
+
+  gap:18px;
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+  font-size:14px;
+
+}
+
+
+.enquiry-right button{
+
+  width:100%;
+
+  text-align:center;
+
+}
+
+
+}

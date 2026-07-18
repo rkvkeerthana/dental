@@ -72,7 +72,7 @@ export default function Reviews() {
   const isNextDisabled = currentIndex + cardsPerPage >= reviews.length;
 
   return (
-    <section className="reviews-section">
+    <section className="reviews-section" id="reviews">
       <div className="reviews-header">
         <div className="reviews-text">
           <h2>What Our Clients Say</h2>

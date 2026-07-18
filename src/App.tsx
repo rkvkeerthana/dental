@@ -7,6 +7,7 @@ import Insights from "./components/Insights/Insights";
 import Reviews from "./components/Reviews/Reviews";
 import Footer from "./components/Footer/Footer";
 import TrustSection from "./components/TrustSection/TrustSection";
+import EnquirySection from "./components/Enquiry/EnquirySection";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Work/>
       <Insights />
       <Reviews />
+      <EnquirySection />
       <Footer />
     </>
   );
